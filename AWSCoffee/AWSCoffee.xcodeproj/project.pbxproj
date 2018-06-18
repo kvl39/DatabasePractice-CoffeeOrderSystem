@@ -26,6 +26,7 @@
 		AD39CD1520D7691E004C594A /* OrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1320D7691E004C594A /* OrderItemTableViewCell.swift */; };
 		AD39CD1620D7691E004C594A /* OrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */; };
 		AD39CD1920D76F96004C594A /* ACTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1820D76F96004C594A /* ACTableViewController.swift */; };
+		AD39CD1B20D77011004C594A /* ACTableViewCellEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1A20D77011004C594A /* ACTableViewCellEnum.swift */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		AD39CD1320D7691E004C594A /* OrderItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemTableViewCell.swift; sourceTree = "<group>"; };
 		AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderItemTableViewCell.xib; sourceTree = "<group>"; };
 		AD39CD1820D76F96004C594A /* ACTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTableViewController.swift; sourceTree = "<group>"; };
+		AD39CD1A20D77011004C594A /* ACTableViewCellEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTableViewCellEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				AD39CD1820D76F96004C594A /* ACTableViewController.swift */,
+				AD39CD1A20D77011004C594A /* ACTableViewCellEnum.swift */,
 			);
 			path = ACTableViewController;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				AD39CD1920D76F96004C594A /* ACTableViewController.swift in Sources */,
 				AD39CD0A20D75230004C594A /* StackItemViewController.swift in Sources */,
 				AD39CD0D20D754E9004C594A /* FirebaseManager.swift in Sources */,
+				AD39CD1B20D77011004C594A /* ACTableViewCellEnum.swift in Sources */,
 				AD39CCE320D74469004C594A /* ViewController.swift in Sources */,
 				AD39CCF820D7473A004C594A /* ACTabBarController.swift in Sources */,
 				AD39CCE120D74469004C594A /* AppDelegate.swift in Sources */,
