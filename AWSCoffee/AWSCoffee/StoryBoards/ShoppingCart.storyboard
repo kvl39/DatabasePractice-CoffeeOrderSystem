@@ -33,9 +33,22 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWF-Tr-XPN">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIR-Us-hdt">
+                                        <rect key="frame" x="160" y="5" width="55" height="30"/>
+                                        <state key="normal" title="Confirm">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="confirmButtonDidPressed:" destination="EiD-gt-Xzr" eventType="touchUpInside" id="EMb-DU-NCE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="wIR-Us-hdt" firstAttribute="centerX" secondItem="hWF-Tr-XPN" secondAttribute="centerX" id="8y3-UH-LtO"/>
                                     <constraint firstAttribute="height" constant="40" id="i0z-xm-rVS"/>
+                                    <constraint firstItem="wIR-Us-hdt" firstAttribute="centerY" secondItem="hWF-Tr-XPN" secondAttribute="centerY" id="jKE-Yc-djo"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -53,5 +53,66 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
         }
         self.orderItemsModelManager.orderItems[rowNumber].itemDetail = status
     }
+    
+    
+//    struct CalculatedItemModel {
+//        var itemName: String
+//        var cups: String
+//        var iced: Bool
+//        var sugar: Bool
+//    }
+
+    
+    @IBAction func confirmButtonDidPressed(_ sender: UIButton) {
+        generateOrder()
+    }
+    
+    
+    func generateOrder() {
+        var selectedItemArray = [CalculatedItemModel]()
+        for i in 0..<self.orderItemsModelManager.orderItems.count {
+            
+            let index = selectedItemArray.index { (item) -> Bool in
+                
+                if (item.itemName
+                    == orderItemsModelManager.orderItems[i].itemInformation.itemName) {
+                    switch (item.iced, item.sugar) {
+                    case (true, true):
+                        if ((orderItemsModelManager.orderItems[i].itemDetail[0])
+                            && (orderItemsModelManager.orderItems[i].itemDetail[0])) {
+                            return true
+                        } else {return false}
+                    case (true, false):
+                        if ((orderItemsModelManager.orderItems[i].itemDetail[0])
+                            && (orderItemsModelManager.orderItems[i].itemDetail[3])) {
+                            return true
+                        } else {return false}
+                    case (false, true):
+                        if ((orderItemsModelManager.orderItems[i].itemDetail[1])
+                            && (orderItemsModelManager.orderItems[i].itemDetail[2])) {
+                            return true
+                        } else {return false}
+                    case (false, false):
+                        if ((orderItemsModelManager.orderItems[i].itemDetail[1])
+                            && (orderItemsModelManager.orderItems[i].itemDetail[3])) {
+                            return true
+                        } else {return false}
+                    }
+                }
+                return false
+            }
+            
+            if let index = index {
+                selectedItemArray[index].cups += 1
+            } else {
+                let addedItem = CalculatedItemModel(
+                    itemName: self.orderItemsModelManager.orderItems[i].itemInformation.itemName, cups: 1,
+                    iced: self.orderItemsModelManager.orderItems[i].itemDetail[0],
+                    sugar: self.orderItemsModelManager.orderItems[i].itemDetail[2])
+                selectedItemArray.append(addedItem)
+            }
+        }
+        print("selectedItemArray:\(selectedItemArray)")
+    }
 
 }

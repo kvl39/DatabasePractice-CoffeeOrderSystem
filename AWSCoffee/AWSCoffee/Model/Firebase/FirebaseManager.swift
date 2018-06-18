@@ -32,4 +32,8 @@ class ACFirebaseManager {
             completion(sellingItemsArray)
         }
     }
+    
+    func createNewOrder() {
+        
+    }
 }

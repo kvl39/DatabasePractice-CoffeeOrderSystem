@@ -30,6 +30,7 @@
 		AD39CD1E20D77B5F004C594A /* OrderItemsModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1D20D77B5F004C594A /* OrderItemsModelManager.swift */; };
 		AD39CD2320D781DF004C594A /* OrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD2120D781DF004C594A /* OrderListTableViewCell.swift */; };
 		AD39CD2420D781DF004C594A /* OrderListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD2220D781DF004C594A /* OrderListTableViewCell.xib */; };
+		AD39CD2720D78A0B004C594A /* CalculatedOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD2620D78A0B004C594A /* CalculatedOrderModel.swift */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		AD39CD1D20D77B5F004C594A /* OrderItemsModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemsModelManager.swift; sourceTree = "<group>"; };
 		AD39CD2120D781DF004C594A /* OrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewCell.swift; sourceTree = "<group>"; };
 		AD39CD2220D781DF004C594A /* OrderListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListTableViewCell.xib; sourceTree = "<group>"; };
+		AD39CD2620D78A0B004C594A /* CalculatedOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatedOrderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		AD39CCF420D7460F004C594A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD2520D789EA004C594A /* CalculatedOrderModel */,
 				AD39CD1C20D77B39004C594A /* OrderItemsModelManager */,
 				AD39CD0B20D75493004C594A /* Firebase */,
 			);
@@ -244,6 +247,14 @@
 				AD39CD2220D781DF004C594A /* OrderListTableViewCell.xib */,
 			);
 			path = OrderListTableViewCell;
+			sourceTree = "<group>";
+		};
+		AD39CD2520D789EA004C594A /* CalculatedOrderModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD39CD2620D78A0B004C594A /* CalculatedOrderModel.swift */,
+			);
+			path = CalculatedOrderModel;
 			sourceTree = "<group>";
 		};
 		C4119C10F521C8D0FFC0B253 /* Frameworks */ = {
@@ -389,6 +400,7 @@
 				AD39CD1920D76F96004C594A /* ACTableViewController.swift in Sources */,
 				AD39CD0A20D75230004C594A /* StackItemViewController.swift in Sources */,
 				AD39CD0D20D754E9004C594A /* FirebaseManager.swift in Sources */,
+				AD39CD2720D78A0B004C594A /* CalculatedOrderModel.swift in Sources */,
 				AD39CD1B20D77011004C594A /* ACTableViewCellEnum.swift in Sources */,
 				AD39CCE320D74469004C594A /* ViewController.swift in Sources */,
 				AD39CD1E20D77B5F004C594A /* OrderItemsModelManager.swift in Sources */,

@@ -27,6 +27,7 @@ extension ACTableViewController: UITableViewDelegate {
             cell.itemNameLabel.text = itemStruct?.orderItemName
             cell.selectionStyle = .none
             cell.delegate = self
+            cell.rowNumber = indexPath.row
             return cell
         }
     }
