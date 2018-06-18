@@ -21,6 +21,8 @@
 		AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0720D74D58004C594A /* StackItemView.swift */; };
 		AD39CD0A20D75230004C594A /* StackItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0920D75230004C594A /* StackItemViewController.swift */; };
 		AD39CD0D20D754E9004C594A /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0C20D754E9004C594A /* FirebaseManager.swift */; };
+		AD39CD0F20D75737004C594A /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0E20D75737004C594A /* FirebaseModel.swift */; };
+		AD39CD1120D758AE004C594A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD1020D758AE004C594A /* GoogleService-Info.plist */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		AD39CD0720D74D58004C594A /* StackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackItemView.swift; sourceTree = "<group>"; };
 		AD39CD0920D75230004C594A /* StackItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackItemViewController.swift; sourceTree = "<group>"; };
 		AD39CD0C20D754E9004C594A /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		AD39CD0E20D75737004C594A /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
+		AD39CD1020D758AE004C594A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 				AD39CCE220D74469004C594A /* ViewController.swift */,
 				AD39CCE720D7446B004C594A /* Assets.xcassets */,
 				AD39CCE920D7446B004C594A /* LaunchScreen.storyboard */,
+				AD39CD1020D758AE004C594A /* GoogleService-Info.plist */,
 				AD39CCEC20D7446B004C594A /* Info.plist */,
 			);
 			path = AWSCoffee;
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				AD39CD0C20D754E9004C594A /* FirebaseManager.swift */,
+				AD39CD0E20D75737004C594A /* FirebaseModel.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD39CCFA20D747D6004C594A /* ShoppingCart.storyboard in Resources */,
+				AD39CD1120D758AE004C594A /* GoogleService-Info.plist in Resources */,
 				AD39CCEB20D7446B004C594A /* LaunchScreen.storyboard in Resources */,
 				AD39CD0620D74D2A004C594A /* StackItemView.xib in Resources */,
 				AD39CCE820D7446B004C594A /* Assets.xcassets in Resources */,
@@ -314,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD39CD0F20D75737004C594A /* FirebaseModel.swift in Sources */,
 				AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */,
 				AD39CD0220D74874004C594A /* OrderListViewController.swift in Sources */,
 				AD39CD0020D7485B004C594A /* ShoppingCartViewController.swift in Sources */,
@@ -473,7 +481,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AWSCoffee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AWSCoffee.KevinLaio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,7 +500,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AWSCoffee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AWSCoffee.KevinLaio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

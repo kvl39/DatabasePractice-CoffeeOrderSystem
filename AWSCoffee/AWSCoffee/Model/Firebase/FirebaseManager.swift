@@ -12,20 +12,24 @@ import Firebase
 class ACFirebaseManager {
     lazy var ref: DatabaseReference = Database.database().reference()
     
-    func retrieveAllSellingItems() {
+    func retrieveAllSellingItems(completion: @escaping ([FirebaseSellingItemModel])-> Void) {
+        
+        var sellingItemsArray = [FirebaseSellingItemModel]()
         let localRef = self.ref.child("items")
-        let query = localRef.queryOrdered(byChild: "recipes")
-        var menuArray = [[String]]()
+        let query = localRef.queryOrderedByKey()
         query.observeSingleEvent(of: .value) { (snapshot) in
             if let result = snapshot.children.allObjects as? [DataSnapshot] {
                 for child in result {
-                    if let recipesName = child.value as? [String: Any],
-                        let recipeArray = recipesName["recipes"] as? [String]{
-                        menuArray.append(recipeArray)
+                    if let sellingItem = child.value as? [String: Any],
+                       let sellingItemImage = sellingItem["image"] as? String,
+                       let sellingItemName = sellingItem["name"] as? String,
+                        let sellingItemPrice = sellingItem["price"] as? Double {
+                        let sellingItem = FirebaseSellingItemModel(itemImage: sellingItemImage, itemName: sellingItemName, itemPrice: sellingItemPrice)
+                        sellingItemsArray.append(sellingItem)
                     }
                 }
             }
-            completion(menuArray)
+            completion(sellingItemsArray)
         }
     }
 }

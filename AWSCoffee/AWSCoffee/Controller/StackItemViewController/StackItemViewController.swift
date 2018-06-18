@@ -17,10 +17,14 @@ class StackItemViewController: UIViewController, StackItemViewProtocol {
 
     let stackItemView = StackItemView()
     weak var delegate: StackItemViewControllerProtocol?
+    let firebaseManager = ACFirebaseManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureStackItemView()
+        firebaseManager.retrieveAllSellingItems { (sellingItems) in
+            print(sellingItems)
+        }
     }
     
     func configureStackItemView() {
