@@ -29,6 +29,17 @@ extension ACTableViewController: UITableViewDelegate {
             cell.delegate = self
             cell.rowNumber = indexPath.row
             return cell
+        case .orderListItem:
+            let itemStruct = item.configureCell() as? OrderListCellStruct
+            guard let cell = cell as? OrderListTableViewCell else {return UITableViewCell()}
+            cell.orderAccountLabel.text = itemStruct?.orderAccountLabelText
+            cell.orderNumberLabel.text = itemStruct?.orderNumberLabelText
+            cell.orderTimeLabel.text = itemStruct?.orderTimeLabelText
+            cell.orderStatusLabel.text = itemStruct?.orderStatusLabelText
+            cell.totalItemLabel.text = itemStruct?.totalItemLabelText
+            cell.totalPriceLabel.text = itemStruct?.totalPriceLabelText
+            cell.selectionStyle = .none
+            return cell
         }
     }
 }

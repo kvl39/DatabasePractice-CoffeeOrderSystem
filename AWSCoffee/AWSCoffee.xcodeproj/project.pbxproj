@@ -31,6 +31,8 @@
 		AD39CD2320D781DF004C594A /* OrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD2120D781DF004C594A /* OrderListTableViewCell.swift */; };
 		AD39CD2420D781DF004C594A /* OrderListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD2220D781DF004C594A /* OrderListTableViewCell.xib */; };
 		AD39CD2720D78A0B004C594A /* CalculatedOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD2620D78A0B004C594A /* CalculatedOrderModel.swift */; };
+		AD39CD2A20D7AF72004C594A /* OrderDetailPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD2920D7AF72004C594A /* OrderDetailPage.storyboard */; };
+		AD39CD2D20D7AFDD004C594A /* OrderDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD2C20D7AFDD004C594A /* OrderDetailPageViewController.swift */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		AD39CD2120D781DF004C594A /* OrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewCell.swift; sourceTree = "<group>"; };
 		AD39CD2220D781DF004C594A /* OrderListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListTableViewCell.xib; sourceTree = "<group>"; };
 		AD39CD2620D78A0B004C594A /* CalculatedOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatedOrderModel.swift; sourceTree = "<group>"; };
+		AD39CD2920D7AF72004C594A /* OrderDetailPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderDetailPage.storyboard; sourceTree = "<group>"; };
+		AD39CD2C20D7AFDD004C594A /* OrderDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		AD39CCF220D74603004C594A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD2B20D7AFBF004C594A /* OrderDetailPageViewController */,
 				AD39CD1720D76F5F004C594A /* ACTableViewController */,
 				AD39CD0420D74CFE004C594A /* StackItemViewController */,
 				AD39CCFE20D74836004C594A /* OrderListController */,
@@ -137,6 +142,7 @@
 		AD39CCF320D7460A004C594A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD2820D7AE90004C594A /* New Group */,
 				AD39CD2020D781BF004C594A /* OrderListTableViewCell */,
 				AD39CD1220D768DE004C594A /* OrderItemView */,
 				AD39CD0320D74CF9004C594A /* StackItemView */,
@@ -160,6 +166,7 @@
 				AD39CCE420D74469004C594A /* Main.storyboard */,
 				AD39CCF920D747D6004C594A /* ShoppingCart.storyboard */,
 				AD39CCFB20D747E9004C594A /* OrderList.storyboard */,
+				AD39CD2920D7AF72004C594A /* OrderDetailPage.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -257,6 +264,21 @@
 			path = CalculatedOrderModel;
 			sourceTree = "<group>";
 		};
+		AD39CD2820D7AE90004C594A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AD39CD2B20D7AFBF004C594A /* OrderDetailPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AD39CD2C20D7AFDD004C594A /* OrderDetailPageViewController.swift */,
+			);
+			path = OrderDetailPageViewController;
+			sourceTree = "<group>";
+		};
 		C4119C10F521C8D0FFC0B253 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD39CCFA20D747D6004C594A /* ShoppingCart.storyboard in Resources */,
+				AD39CD2A20D7AF72004C594A /* OrderDetailPage.storyboard in Resources */,
 				AD39CD1620D7691E004C594A /* OrderItemTableViewCell.xib in Resources */,
 				AD39CD1120D758AE004C594A /* GoogleService-Info.plist in Resources */,
 				AD39CCEB20D7446B004C594A /* LaunchScreen.storyboard in Resources */,
@@ -392,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD39CD0F20D75737004C594A /* FirebaseModel.swift in Sources */,
+				AD39CD2D20D7AFDD004C594A /* OrderDetailPageViewController.swift in Sources */,
 				AD39CD1520D7691E004C594A /* OrderItemTableViewCell.swift in Sources */,
 				AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */,
 				AD39CD0220D74874004C594A /* OrderListViewController.swift in Sources */,

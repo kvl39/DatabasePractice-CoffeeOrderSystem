@@ -169,6 +169,13 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
             account: account, content: selectedItemArray, itemCount: itemCount,
             price: totalPrice, status: status, time: time)
         firebaseManager.createNewOrder(calculatedOrderModel: calculatedOrderModel)
+        pushToListDetailView(calculatedOrderModel: calculatedOrderModel)
+    }
+    
+    func pushToListDetailView(calculatedOrderModel: CalculatedOrderModel) {
+        guard let vc = UIStoryboard(name: "OrderDetailPage", bundle: nil).instantiateInitialViewController() as? OrderDetailPageViewController else {return}
+        vc.calculatedOrderModel = calculatedOrderModel
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 }
