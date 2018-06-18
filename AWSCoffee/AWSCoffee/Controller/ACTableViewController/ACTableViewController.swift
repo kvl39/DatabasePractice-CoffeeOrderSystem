@@ -11,7 +11,7 @@ import UIKit
 
 
 class ACTableViewController: UIViewController {
-    let rowArray = [ACTableViewCellType]()
+    var rowArray = [ACTableViewCellType]()
 }
 
 
@@ -24,6 +24,7 @@ extension ACTableViewController: UITableViewDelegate {
             let itemStruct = item.configureCell() as? OrderItemCellStruct
             guard let cell = cell as? OrderItemTableViewCell else {return UITableViewCell()}
             cell.itemNameLabel.text = itemStruct?.orderItemName
+            cell.selectionStyle = .none
             return cell
         }
     }

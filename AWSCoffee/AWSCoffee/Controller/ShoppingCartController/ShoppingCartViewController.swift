@@ -8,14 +8,21 @@
 
 import UIKit
 
-class ShoppingCartViewController: UIViewController {
+class ShoppingCartViewController: ACTableViewController {
 
     
+    @IBOutlet weak var shoppingCartTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
     }
 
-    
+    func configureTableView() {
+        self.shoppingCartTableView.delegate = self
+        self.shoppingCartTableView.dataSource = self
+        shoppingCartTableView.register(UINib(nibName: "OrderItemTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderItemTableViewCell")
+        self.rowArray.append(.orderItem("Test"))
+    }
 
 }

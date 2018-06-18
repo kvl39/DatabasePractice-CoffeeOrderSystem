@@ -27,16 +27,37 @@
                                     <segue destination="85K-JV-ffH" kind="embed" id="7yy-KA-P8T"/>
                                 </connections>
                             </containerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1ex-Es-IEa">
+                                <rect key="frame" x="0.0" y="264" width="375" height="363"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWF-Tr-XPN">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="i0z-xm-rVS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1ex-Es-IEa" firstAttribute="leading" secondItem="Qag-4o-4Rf" secondAttribute="leading" id="2dG-O3-8WF"/>
+                            <constraint firstItem="hWF-Tr-XPN" firstAttribute="bottom" secondItem="Qag-4o-4Rf" secondAttribute="bottom" id="6s2-oK-7bD"/>
+                            <constraint firstItem="hWF-Tr-XPN" firstAttribute="leading" secondItem="Qag-4o-4Rf" secondAttribute="leading" id="74W-16-Ce8"/>
+                            <constraint firstItem="hWF-Tr-XPN" firstAttribute="top" secondItem="1ex-Es-IEa" secondAttribute="bottom" id="7pQ-2t-DOP"/>
+                            <constraint firstItem="1ex-Es-IEa" firstAttribute="top" secondItem="kfv-pw-Hj0" secondAttribute="bottom" id="F5i-qq-Hjt"/>
                             <constraint firstItem="kfv-pw-Hj0" firstAttribute="top" secondItem="Qag-4o-4Rf" secondAttribute="top" id="RdB-mT-BmQ"/>
                             <constraint firstItem="kfv-pw-Hj0" firstAttribute="leading" secondItem="Qag-4o-4Rf" secondAttribute="leading" id="XxS-QJ-DmS"/>
                             <constraint firstItem="Qag-4o-4Rf" firstAttribute="trailing" secondItem="kfv-pw-Hj0" secondAttribute="trailing" id="jnb-KA-94e"/>
+                            <constraint firstItem="Qag-4o-4Rf" firstAttribute="trailing" secondItem="hWF-Tr-XPN" secondAttribute="trailing" id="lYI-6s-4vK"/>
+                            <constraint firstItem="Qag-4o-4Rf" firstAttribute="trailing" secondItem="1ex-Es-IEa" secondAttribute="trailing" id="yck-fC-7bS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qag-4o-4Rf"/>
                     </view>
                     <navigationItem key="navigationItem" title="AWS Cafe" id="IDf-Bo-wbw"/>
+                    <connections>
+                        <outlet property="shoppingCartTableView" destination="1ex-Es-IEa" id="urA-TK-qlb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wke-Ws-QU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,6 +89,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bql-lt-BG5"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvf-ub-cyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
