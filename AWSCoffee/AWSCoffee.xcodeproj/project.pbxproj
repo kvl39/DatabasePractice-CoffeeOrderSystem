@@ -28,6 +28,8 @@
 		AD39CD1920D76F96004C594A /* ACTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1820D76F96004C594A /* ACTableViewController.swift */; };
 		AD39CD1B20D77011004C594A /* ACTableViewCellEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1A20D77011004C594A /* ACTableViewCellEnum.swift */; };
 		AD39CD1E20D77B5F004C594A /* OrderItemsModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1D20D77B5F004C594A /* OrderItemsModelManager.swift */; };
+		AD39CD2320D781DF004C594A /* OrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD2120D781DF004C594A /* OrderListTableViewCell.swift */; };
+		AD39CD2420D781DF004C594A /* OrderListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD2220D781DF004C594A /* OrderListTableViewCell.xib */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		AD39CD1820D76F96004C594A /* ACTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTableViewController.swift; sourceTree = "<group>"; };
 		AD39CD1A20D77011004C594A /* ACTableViewCellEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTableViewCellEnum.swift; sourceTree = "<group>"; };
 		AD39CD1D20D77B5F004C594A /* OrderItemsModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemsModelManager.swift; sourceTree = "<group>"; };
+		AD39CD2120D781DF004C594A /* OrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewCell.swift; sourceTree = "<group>"; };
+		AD39CD2220D781DF004C594A /* OrderListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		AD39CCF320D7460A004C594A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD2020D781BF004C594A /* OrderListTableViewCell */,
 				AD39CD1220D768DE004C594A /* OrderItemView */,
 				AD39CD0320D74CF9004C594A /* StackItemView */,
 			);
@@ -232,6 +237,15 @@
 			path = OrderItemsModelManager;
 			sourceTree = "<group>";
 		};
+		AD39CD2020D781BF004C594A /* OrderListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AD39CD2120D781DF004C594A /* OrderListTableViewCell.swift */,
+				AD39CD2220D781DF004C594A /* OrderListTableViewCell.xib */,
+			);
+			path = OrderListTableViewCell;
+			sourceTree = "<group>";
+		};
 		C4119C10F521C8D0FFC0B253 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +318,7 @@
 				AD39CD1620D7691E004C594A /* OrderItemTableViewCell.xib in Resources */,
 				AD39CD1120D758AE004C594A /* GoogleService-Info.plist in Resources */,
 				AD39CCEB20D7446B004C594A /* LaunchScreen.storyboard in Resources */,
+				AD39CD2420D781DF004C594A /* OrderListTableViewCell.xib in Resources */,
 				AD39CD0620D74D2A004C594A /* StackItemView.xib in Resources */,
 				AD39CCE820D7446B004C594A /* Assets.xcassets in Resources */,
 				AD39CCFC20D747E9004C594A /* OrderList.storyboard in Resources */,
@@ -369,6 +384,7 @@
 				AD39CD1520D7691E004C594A /* OrderItemTableViewCell.swift in Sources */,
 				AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */,
 				AD39CD0220D74874004C594A /* OrderListViewController.swift in Sources */,
+				AD39CD2320D781DF004C594A /* OrderListTableViewCell.swift in Sources */,
 				AD39CD0020D7485B004C594A /* ShoppingCartViewController.swift in Sources */,
 				AD39CD1920D76F96004C594A /* ACTableViewController.swift in Sources */,
 				AD39CD0A20D75230004C594A /* StackItemViewController.swift in Sources */,
