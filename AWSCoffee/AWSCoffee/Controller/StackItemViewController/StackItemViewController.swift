@@ -73,7 +73,7 @@ class StackItemViewController: UIViewController, StackItemViewProtocol {
     }
 
     func itemDidPressed(tag: Int) {
-        self.delegate?.itemDidPressed(itemInformation: self.sellingItems[tag])
+        self.delegate?.itemDidPressed(itemInformation: self.sellingItems[tag-1])
     }
     
 
