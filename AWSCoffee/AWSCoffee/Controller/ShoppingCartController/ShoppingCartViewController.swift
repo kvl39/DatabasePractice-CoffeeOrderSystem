@@ -72,10 +72,19 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
         var totalPrice: Double = 0.0
         for i in 0..<self.orderItemsModelManager.orderItems.count {
             totalPrice += self.orderItemsModelManager.orderItems[i].itemInformation.itemPrice
+            var nameDidExist = false
             let index = selectedItemArray.index { (item) -> Bool in
                 
                 if (item.itemName
                     == orderItemsModelManager.orderItems[i].itemInformation.itemName) {
+                    nameDidExist = true
+                    return true
+                }
+                return false
+            }
+            
+            if let index = index {
+                let index1 = selectedItemArray[index].itemDetailArray.index { (item) -> Bool in
                     switch (item.iced, item.sugar) {
                     case (true, true):
                         if ((orderItemsModelManager.orderItems[i].itemDetail[0])
@@ -99,18 +108,45 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
                         } else {return false}
                     }
                 }
-                return false
-            }
-            
-            if let index = index {
-                selectedItemArray[index].cups += 1
+                if let index1 = index1 {
+                    //name exists, detail exists too
+                    //cup += 1
+                    selectedItemArray[index].itemDetailArray[index1].cups += 1
+                } else {
+                    //name exists, detail doesn't exist
+                    //add detail
+                    let itemDetailModel = ItemDetailModel(
+                        cups: 1,
+                        iced: self.orderItemsModelManager.orderItems[i].itemDetail[0],
+                        sugar: self.orderItemsModelManager.orderItems[i].itemDetail[2])
+                    selectedItemArray[index].itemDetailArray.append(itemDetailModel)
+                }
             } else {
-                let addedItem = CalculatedItemModel(
-                    itemName: self.orderItemsModelManager.orderItems[i].itemInformation.itemName, cups: 1,
+                //name doesn't exist
+                //add name and detail
+                let itemDetailModel = ItemDetailModel(
+                    cups: 1,
                     iced: self.orderItemsModelManager.orderItems[i].itemDetail[0],
                     sugar: self.orderItemsModelManager.orderItems[i].itemDetail[2])
-                selectedItemArray.append(addedItem)
+                let calculatedItemModel = CalculatedItemModel(
+                    itemName: self.orderItemsModelManager.orderItems[i].itemInformation.itemName,
+                    itemDetailArray: [itemDetailModel])
+                selectedItemArray.append(calculatedItemModel)
             }
+            
+            
+            
+//            if let index = index {
+////                selectedItemArray[index].cups += 1
+//            } else {
+//                
+//                
+//                let addedItem = CalculatedItemModel(
+//                    itemName: self.orderItemsModelManager.orderItems[i].itemInformation.itemName, cups: 1,
+//                    iced: self.orderItemsModelManager.orderItems[i].itemDetail[0],
+//                    sugar: self.orderItemsModelManager.orderItems[i].itemDetail[2])
+//                selectedItemArray.append(addedItem)
+//            }
         }
         print("selectedItemArray:\(selectedItemArray)")
         completion(selectedItemArray, totalPrice)

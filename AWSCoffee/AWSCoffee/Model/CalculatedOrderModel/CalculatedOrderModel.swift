@@ -19,6 +19,10 @@ struct CalculatedOrderModel {
 
 struct CalculatedItemModel {
     var itemName: String
+    var itemDetailArray: [ItemDetailModel]
+}
+
+struct ItemDetailModel {
     var cups: Int
     var iced: Bool
     var sugar: Bool
