@@ -9,4 +9,6 @@ target 'AWSCoffee' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'SDWebImage'
+  pod 'LTHRadioButton'
 end

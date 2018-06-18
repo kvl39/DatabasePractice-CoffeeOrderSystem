@@ -19,6 +19,7 @@ class StackItemView: UIView {
     weak var delegate: StackItemViewProtocol?
     @IBOutlet var contentView: UIView!
     @IBOutlet var stackItemCollection: [UIButton]!
+    @IBOutlet var buttonImageCollection: [UIImageView]!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

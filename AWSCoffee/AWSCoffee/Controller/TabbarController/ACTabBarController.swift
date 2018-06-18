@@ -43,7 +43,7 @@ class ACTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabs()
-        selectedIndex = 1
+        selectedIndex = 0
     }
     
     func setupTabs() {

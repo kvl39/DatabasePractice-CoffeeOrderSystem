@@ -22,6 +22,7 @@
                 <outletCollection property="stackItemCollection" destination="c9e-6K-tDB" collectionClass="NSMutableArray" id="WPl-7g-J4M"/>
                 <outletCollection property="stackItemCollection" destination="d98-Mi-3Ks" collectionClass="NSMutableArray" id="7Y8-Xg-DVh"/>
                 <outletCollection property="stackItemCollection" destination="BKZ-dU-MdZ" collectionClass="NSMutableArray" id="8Rk-CX-lwF"/>
+                <outletCollection property="buttonImageCollection" destination="o7B-JX-hN2" collectionClass="NSMutableArray" id="hiY-zG-C1B"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -46,11 +47,18 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o7B-JX-hN2">
+                                            <rect key="frame" x="21.5" y="22" width="46" height="46"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="I18-81-jIr" firstAttribute="centerX" secondItem="lpK-EB-eCs" secondAttribute="centerX" id="Cs4-sH-kbk"/>
+                                        <constraint firstItem="o7B-JX-hN2" firstAttribute="centerX" secondItem="I18-81-jIr" secondAttribute="centerX" id="K4q-R6-owz"/>
+                                        <constraint firstItem="o7B-JX-hN2" firstAttribute="width" secondItem="I18-81-jIr" secondAttribute="width" id="Ne6-8u-kdK"/>
                                         <constraint firstItem="I18-81-jIr" firstAttribute="centerY" secondItem="lpK-EB-eCs" secondAttribute="centerY" id="ggP-hq-VYc"/>
+                                        <constraint firstItem="o7B-JX-hN2" firstAttribute="centerY" secondItem="I18-81-jIr" secondAttribute="centerY" id="jHn-Vf-KRP"/>
+                                        <constraint firstItem="o7B-JX-hN2" firstAttribute="height" secondItem="I18-81-jIr" secondAttribute="height" id="qkU-KS-bvh"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9d-tq-Ai3">

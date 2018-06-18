@@ -23,6 +23,8 @@
 		AD39CD0D20D754E9004C594A /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0C20D754E9004C594A /* FirebaseManager.swift */; };
 		AD39CD0F20D75737004C594A /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0E20D75737004C594A /* FirebaseModel.swift */; };
 		AD39CD1120D758AE004C594A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD1020D758AE004C594A /* GoogleService-Info.plist */; };
+		AD39CD1520D7691E004C594A /* OrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1320D7691E004C594A /* OrderItemTableViewCell.swift */; };
+		AD39CD1620D7691E004C594A /* OrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		AD39CD0C20D754E9004C594A /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		AD39CD0E20D75737004C594A /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		AD39CD1020D758AE004C594A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD39CD1320D7691E004C594A /* OrderItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemTableViewCell.swift; sourceTree = "<group>"; };
+		AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderItemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		AD39CCF320D7460A004C594A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD1220D768DE004C594A /* OrderItemView */,
 				AD39CD0320D74CF9004C594A /* StackItemView */,
 			);
 			path = View;
@@ -193,6 +198,15 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
+		AD39CD1220D768DE004C594A /* OrderItemView */ = {
+			isa = PBXGroup;
+			children = (
+				AD39CD1320D7691E004C594A /* OrderItemTableViewCell.swift */,
+				AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */,
+			);
+			path = OrderItemView;
+			sourceTree = "<group>";
+		};
 		C4119C10F521C8D0FFC0B253 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD39CCFA20D747D6004C594A /* ShoppingCart.storyboard in Resources */,
+				AD39CD1620D7691E004C594A /* OrderItemTableViewCell.xib in Resources */,
 				AD39CD1120D758AE004C594A /* GoogleService-Info.plist in Resources */,
 				AD39CCEB20D7446B004C594A /* LaunchScreen.storyboard in Resources */,
 				AD39CD0620D74D2A004C594A /* StackItemView.xib in Resources */,
@@ -282,12 +297,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AWSCoffee/Pods-AWSCoffee-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/LTHRadioButton/LTHRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTHRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -322,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD39CD0F20D75737004C594A /* FirebaseModel.swift in Sources */,
+				AD39CD1520D7691E004C594A /* OrderItemTableViewCell.swift in Sources */,
 				AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */,
 				AD39CD0220D74874004C594A /* OrderListViewController.swift in Sources */,
 				AD39CD0020D7485B004C594A /* ShoppingCartViewController.swift in Sources */,
@@ -477,10 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLL3688WWP;
 				INFOPLIST_FILE = AWSCoffee/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AWSCoffee.KevinLaio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -496,10 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLL3688WWP;
 				INFOPLIST_FILE = AWSCoffee/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AWSCoffee.KevinLaio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
