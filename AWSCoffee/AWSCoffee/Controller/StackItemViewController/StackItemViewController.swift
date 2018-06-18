@@ -24,6 +24,7 @@ class StackItemViewController: UIViewController, StackItemViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureStackItemView()
+        self.stackItemView.stackItemCollection[7].alpha = 0
         firebaseManager.retrieveAllSellingItems { (sellingItems) in
             self.sellingItems = sellingItems
             //self.configureItemImage()
