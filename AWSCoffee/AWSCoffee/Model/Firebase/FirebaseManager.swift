@@ -33,7 +33,41 @@ class ACFirebaseManager {
         }
     }
     
-    func createNewOrder() {
+    func createNewOrder(calculatedOrderModel: CalculatedOrderModel) {
+        let newOrder = self.ref.child("orders").childByAutoId()
+        newOrder.setValue([
+            "account": calculatedOrderModel.account,
+            "itemCount": calculatedOrderModel.itemCount,
+            "price": calculatedOrderModel.price,
+            "status": calculatedOrderModel.status,
+            "time": calculatedOrderModel.time
+            ])
         
+        var contentDetailDictionary = [[String: Any]]()
+        
+        
+        for content in calculatedOrderModel.content {
+            contentDetailDictionary = []
+            var dictionary = [String: Any]()
+            for contentDetail in content.itemDetailArray {
+                dictionary["cups"] = contentDetail.cups
+                dictionary["iced"] = contentDetail.iced
+                dictionary["sugar"] = contentDetail.sugar
+                contentDetailDictionary.append(dictionary)
+                dictionary = [String: Any]()
+            }
+            newOrder.child("content").setValue([
+                "\(content.itemName)": contentDetailDictionary
+                ])
+        }
+        
+//        self.ref.child("recipe/\(recipeRealmModel.label)").setValue([
+//            "url": recipeRealmModel.url,
+//            "label": recipeRealmModel.label,
+//            "calories": recipeRealmModel.calories,
+//            "image": recipeRealmModel.image,
+//            "ingredients": ingredients,
+//            "nuitrients": nuitrients
+//            ])
     }
 }

@@ -15,6 +15,7 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
     
     var orderItemsModelManager = OrderItemsModelManager()
     var stackItemViewController: StackItemViewController?
+    var firebaseManager = ACFirebaseManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +89,7 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
                     switch (item.iced, item.sugar) {
                     case (true, true):
                         if ((orderItemsModelManager.orderItems[i].itemDetail[0])
-                            && (orderItemsModelManager.orderItems[i].itemDetail[0])) {
+                            && (orderItemsModelManager.orderItems[i].itemDetail[2])) {
                             return true
                         } else {return false}
                     case (true, false):
@@ -164,10 +165,10 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
         var account = "wayne.chen@awscafe.tw"
         var status = 0
         var time = 0
-        var calculatedOrderMode = CalculatedOrderModel(
+        var calculatedOrderModel = CalculatedOrderModel(
             account: account, content: selectedItemArray, itemCount: itemCount,
             price: totalPrice, status: status, time: time)
-        //firebase.create
+        firebaseManager.createNewOrder(calculatedOrderModel: calculatedOrderModel)
     }
 
 }

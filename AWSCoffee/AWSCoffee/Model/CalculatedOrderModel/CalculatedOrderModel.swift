@@ -27,3 +27,5 @@ struct ItemDetailModel {
     var iced: Bool
     var sugar: Bool
 }
+
+
