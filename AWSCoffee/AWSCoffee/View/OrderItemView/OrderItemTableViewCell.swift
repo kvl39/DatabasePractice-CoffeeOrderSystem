@@ -17,12 +17,40 @@ class OrderItemTableViewCell: UITableViewCell {
     
     @IBOutlet var radioButtonView: [UIView]!
     
-    let radioButton = LTHRadioButton(selectedColor: .red)
+    var radioButtonArray =  [LTHRadioButton]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        configureRadioButtons()
+    }
+    
+    func configureRadioButtons() {
+        for i in 0...3 {
+            let radioButton = LTHRadioButton(selectedColor: .blue)
+            radioButton.frame = CGRect(x: 5.0, y: 10.0, width: 20.0, height: 20.0)
+            radioButtonArray.append(radioButton)
+            radioButtonView[i].addSubview(radioButton)
+            radioButton.tag = i + 10
+            radioButton.onSelect {
+                self.radioButtonGroupSelectHandler(selectedNumber: radioButton.tag)
+            }
+        }
+    }
+    
+    func radioButtonGroupSelectHandler(selectedNumber: Int) {
+        switch selectedNumber {
+        case 10:
+            radioButtonArray[1].deselect()
+        case 11:
+            radioButtonArray[0].deselect()
+        case 12:
+            radioButtonArray[3].deselect()
+        case 13:
+            radioButtonArray[2].deselect()
+        default:
+            return
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
