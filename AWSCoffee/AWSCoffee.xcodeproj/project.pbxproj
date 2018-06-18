@@ -17,6 +17,8 @@
 		AD39CCFC20D747E9004C594A /* OrderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD39CCFB20D747E9004C594A /* OrderList.storyboard */; };
 		AD39CD0020D7485B004C594A /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CCFF20D7485B004C594A /* ShoppingCartViewController.swift */; };
 		AD39CD0220D74874004C594A /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0120D74874004C594A /* OrderListViewController.swift */; };
+		AD39CD0620D74D2A004C594A /* StackItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD0520D74D2A004C594A /* StackItemView.xib */; };
+		AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0720D74D58004C594A /* StackItemView.swift */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		AD39CCFB20D747E9004C594A /* OrderList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderList.storyboard; sourceTree = "<group>"; };
 		AD39CCFF20D7485B004C594A /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		AD39CD0120D74874004C594A /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
+		AD39CD0520D74D2A004C594A /* StackItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackItemView.xib; sourceTree = "<group>"; };
+		AD39CD0720D74D58004C594A /* StackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		AD39CCF220D74603004C594A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD0420D74CFE004C594A /* StackItemViewController */,
 				AD39CCFE20D74836004C594A /* OrderListController */,
 				AD39CCFD20D74824004C594A /* ShoppingCartController */,
 				AD39CCF620D746F0004C594A /* TabbarController */,
@@ -106,6 +111,7 @@
 		AD39CCF320D7460A004C594A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD0320D74CF9004C594A /* StackItemView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +155,22 @@
 				AD39CD0120D74874004C594A /* OrderListViewController.swift */,
 			);
 			path = OrderListController;
+			sourceTree = "<group>";
+		};
+		AD39CD0320D74CF9004C594A /* StackItemView */ = {
+			isa = PBXGroup;
+			children = (
+				AD39CD0520D74D2A004C594A /* StackItemView.xib */,
+				AD39CD0720D74D58004C594A /* StackItemView.swift */,
+			);
+			path = StackItemView;
+			sourceTree = "<group>";
+		};
+		AD39CD0420D74CFE004C594A /* StackItemViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StackItemViewController;
 			sourceTree = "<group>";
 		};
 		C4119C10F521C8D0FFC0B253 /* Frameworks */ = {
@@ -221,6 +243,7 @@
 			files = (
 				AD39CCFA20D747D6004C594A /* ShoppingCart.storyboard in Resources */,
 				AD39CCEB20D7446B004C594A /* LaunchScreen.storyboard in Resources */,
+				AD39CD0620D74D2A004C594A /* StackItemView.xib in Resources */,
 				AD39CCE820D7446B004C594A /* Assets.xcassets in Resources */,
 				AD39CCFC20D747E9004C594A /* OrderList.storyboard in Resources */,
 				AD39CCE620D74469004C594A /* Main.storyboard in Resources */,
@@ -277,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */,
 				AD39CD0220D74874004C594A /* OrderListViewController.swift in Sources */,
 				AD39CD0020D7485B004C594A /* ShoppingCartViewController.swift in Sources */,
 				AD39CCE320D74469004C594A /* ViewController.swift in Sources */,

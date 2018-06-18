@@ -10,17 +10,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Shopping Cart View Controller-->
+        <!--AWS Cafe-->
         <scene sceneID="IFM-ea-hQp">
             <objects>
                 <viewController id="EiD-gt-Xzr" customClass="ShoppingCartViewController" customModule="AWSCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C6A-kS-INa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfv-pw-Hj0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8MH-Wu-zYu"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="85K-JV-ffH" kind="embed" id="7yy-KA-P8T"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kfv-pw-Hj0" firstAttribute="top" secondItem="Qag-4o-4Rf" secondAttribute="top" id="RdB-mT-BmQ"/>
+                            <constraint firstItem="kfv-pw-Hj0" firstAttribute="leading" secondItem="Qag-4o-4Rf" secondAttribute="leading" id="XxS-QJ-DmS"/>
+                            <constraint firstItem="Qag-4o-4Rf" firstAttribute="trailing" secondItem="kfv-pw-Hj0" secondAttribute="trailing" id="jnb-KA-94e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Qag-4o-4Rf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IDf-Bo-wbw"/>
+                    <navigationItem key="navigationItem" title="AWS Cafe" id="IDf-Bo-wbw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wke-Ws-QU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,6 +59,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sa-h0-mKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-122.40000000000001" y="-61.619190404797607"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y8P-4X-ZhX">
+            <objects>
+                <viewController id="85K-JV-ffH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z6E-0O-AYK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvf-ub-cyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="-241"/>
         </scene>
     </scenes>
 </document>
