@@ -19,6 +19,8 @@
 		AD39CD0220D74874004C594A /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0120D74874004C594A /* OrderListViewController.swift */; };
 		AD39CD0620D74D2A004C594A /* StackItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD0520D74D2A004C594A /* StackItemView.xib */; };
 		AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0720D74D58004C594A /* StackItemView.swift */; };
+		AD39CD0A20D75230004C594A /* StackItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0920D75230004C594A /* StackItemViewController.swift */; };
+		AD39CD0D20D754E9004C594A /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD0C20D754E9004C594A /* FirebaseManager.swift */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		AD39CD0120D74874004C594A /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		AD39CD0520D74D2A004C594A /* StackItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackItemView.xib; sourceTree = "<group>"; };
 		AD39CD0720D74D58004C594A /* StackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackItemView.swift; sourceTree = "<group>"; };
+		AD39CD0920D75230004C594A /* StackItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackItemViewController.swift; sourceTree = "<group>"; };
+		AD39CD0C20D754E9004C594A /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		AD39CCF420D7460F004C594A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD0B20D75493004C594A /* Firebase */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,8 +174,17 @@
 		AD39CD0420D74CFE004C594A /* StackItemViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD0920D75230004C594A /* StackItemViewController.swift */,
 			);
 			path = StackItemViewController;
+			sourceTree = "<group>";
+		};
+		AD39CD0B20D75493004C594A /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				AD39CD0C20D754E9004C594A /* FirebaseManager.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		C4119C10F521C8D0FFC0B253 /* Frameworks */ = {
@@ -303,6 +317,8 @@
 				AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */,
 				AD39CD0220D74874004C594A /* OrderListViewController.swift in Sources */,
 				AD39CD0020D7485B004C594A /* ShoppingCartViewController.swift in Sources */,
+				AD39CD0A20D75230004C594A /* StackItemViewController.swift in Sources */,
+				AD39CD0D20D754E9004C594A /* FirebaseManager.swift in Sources */,
 				AD39CCE320D74469004C594A /* ViewController.swift in Sources */,
 				AD39CCF820D7473A004C594A /* ACTabBarController.swift in Sources */,
 				AD39CCE120D74469004C594A /* AppDelegate.swift in Sources */,

@@ -11,7 +11,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StackItemView" customModule="AWSCoffee" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="FNy-ps-ZrF"/>
+                <outletCollection property="stackItemCollection" destination="I18-81-jIr" collectionClass="NSMutableArray" id="MK5-Df-ts0"/>
+                <outletCollection property="stackItemCollection" destination="Wsl-mA-jFx" collectionClass="NSMutableArray" id="Hlw-rN-Xso"/>
+                <outletCollection property="stackItemCollection" destination="fH8-kS-5G8" collectionClass="NSMutableArray" id="Mau-us-fGk"/>
+                <outletCollection property="stackItemCollection" destination="nzO-ns-sAS" collectionClass="NSMutableArray" id="We2-5m-MaN"/>
+                <outletCollection property="stackItemCollection" destination="y1s-zf-Bhn" collectionClass="NSMutableArray" id="Vd7-Be-gDe"/>
+                <outletCollection property="stackItemCollection" destination="c9e-6K-tDB" collectionClass="NSMutableArray" id="WPl-7g-J4M"/>
+                <outletCollection property="stackItemCollection" destination="d98-Mi-3Ks" collectionClass="NSMutableArray" id="7Y8-Xg-DVh"/>
+                <outletCollection property="stackItemCollection" destination="BKZ-dU-MdZ" collectionClass="NSMutableArray" id="8Rk-CX-lwF"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
