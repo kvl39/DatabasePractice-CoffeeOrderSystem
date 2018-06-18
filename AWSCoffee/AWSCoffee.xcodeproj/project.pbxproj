@@ -27,6 +27,7 @@
 		AD39CD1620D7691E004C594A /* OrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */; };
 		AD39CD1920D76F96004C594A /* ACTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1820D76F96004C594A /* ACTableViewController.swift */; };
 		AD39CD1B20D77011004C594A /* ACTableViewCellEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1A20D77011004C594A /* ACTableViewCellEnum.swift */; };
+		AD39CD1E20D77B5F004C594A /* OrderItemsModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1D20D77B5F004C594A /* OrderItemsModelManager.swift */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderItemTableViewCell.xib; sourceTree = "<group>"; };
 		AD39CD1820D76F96004C594A /* ACTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTableViewController.swift; sourceTree = "<group>"; };
 		AD39CD1A20D77011004C594A /* ACTableViewCellEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTableViewCellEnum.swift; sourceTree = "<group>"; };
+		AD39CD1D20D77B5F004C594A /* OrderItemsModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemsModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		AD39CCF420D7460F004C594A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD1C20D77B39004C594A /* OrderItemsModelManager */,
 				AD39CD0B20D75493004C594A /* Firebase */,
 			);
 			path = Model;
@@ -219,6 +222,14 @@
 				AD39CD1A20D77011004C594A /* ACTableViewCellEnum.swift */,
 			);
 			path = ACTableViewController;
+			sourceTree = "<group>";
+		};
+		AD39CD1C20D77B39004C594A /* OrderItemsModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD39CD1D20D77B5F004C594A /* OrderItemsModelManager.swift */,
+			);
+			path = OrderItemsModelManager;
 			sourceTree = "<group>";
 		};
 		C4119C10F521C8D0FFC0B253 /* Frameworks */ = {
@@ -364,6 +375,7 @@
 				AD39CD0D20D754E9004C594A /* FirebaseManager.swift in Sources */,
 				AD39CD1B20D77011004C594A /* ACTableViewCellEnum.swift in Sources */,
 				AD39CCE320D74469004C594A /* ViewController.swift in Sources */,
+				AD39CD1E20D77B5F004C594A /* OrderItemsModelManager.swift in Sources */,
 				AD39CCF820D7473A004C594A /* ACTabBarController.swift in Sources */,
 				AD39CCE120D74469004C594A /* AppDelegate.swift in Sources */,
 			);

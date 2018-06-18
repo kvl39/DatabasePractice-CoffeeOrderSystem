@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="200" id="8MH-Wu-zYu"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="85K-JV-ffH" kind="embed" id="7yy-KA-P8T"/>
+                                    <segue destination="85K-JV-ffH" kind="embed" identifier="segueToStackItemView" id="7yy-KA-P8T"/>
                                 </connections>
                             </containerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1ex-Es-IEa">

@@ -9,15 +9,21 @@
 import UIKit
 import LTHRadioButton
 
+protocol OrderItemTableViewProtocol: class {
+    func radioButtonDidSelect(rowNumber: Int)
+}
+
+
 class OrderItemTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
-    
     @IBOutlet var radioButtonView: [UIView]!
     
+    var rowNumber = 0
     var radioButtonArray =  [LTHRadioButton]()
+    weak var delegate: OrderItemTableViewProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,12 +57,12 @@ class OrderItemTableViewCell: UITableViewCell {
         default:
             return
         }
+        self.delegate?.radioButtonDidSelect(rowNumber: self.rowNumber)
     }
 
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

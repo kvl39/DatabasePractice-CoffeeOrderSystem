@@ -10,8 +10,9 @@ import UIKit
 
 
 
-class ACTableViewController: UIViewController {
+class ACTableViewController: UIViewController, OrderItemTableViewProtocol {
     var rowArray = [ACTableViewCellType]()
+    func radioButtonDidSelect(rowNumber: Int) {}
 }
 
 
@@ -25,6 +26,7 @@ extension ACTableViewController: UITableViewDelegate {
             guard let cell = cell as? OrderItemTableViewCell else {return UITableViewCell()}
             cell.itemNameLabel.text = itemStruct?.orderItemName
             cell.selectionStyle = .none
+            cell.delegate = self
             return cell
         }
     }
