@@ -67,11 +67,11 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
         generateOrder()
     }
     
-    
-    func generateOrder() {
+    func calculatedTotalCups(completion: ([CalculatedItemModel], Double) -> Void) {
         var selectedItemArray = [CalculatedItemModel]()
+        var totalPrice: Double = 0.0
         for i in 0..<self.orderItemsModelManager.orderItems.count {
-            
+            totalPrice += self.orderItemsModelManager.orderItems[i].itemInformation.itemPrice
             let index = selectedItemArray.index { (item) -> Bool in
                 
                 if (item.itemName
@@ -113,6 +113,25 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
             }
         }
         print("selectedItemArray:\(selectedItemArray)")
+        completion(selectedItemArray, totalPrice)
+    }
+    
+    
+    func generateOrder() {
+        var selectedItemArray = [CalculatedItemModel]()
+        var totalPrice: Double = 0.0
+        self.calculatedTotalCups { (calculatedItemModel, calculatedTotalPrice) in
+            selectedItemArray = calculatedItemModel
+            totalPrice = calculatedTotalPrice
+        }
+        var itemCount = self.orderItemsModelManager.orderItems.count
+        var account = "wayne.chen@awscafe.tw"
+        var status = 0
+        var time = 0
+        var calculatedOrderMode = CalculatedOrderModel(
+            account: account, content: selectedItemArray, itemCount: itemCount,
+            price: totalPrice, status: status, time: time)
+        //firebase.create
     }
 
 }
