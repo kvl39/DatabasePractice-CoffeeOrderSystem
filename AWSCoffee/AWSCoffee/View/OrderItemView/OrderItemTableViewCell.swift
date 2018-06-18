@@ -11,6 +11,12 @@ import LTHRadioButton
 
 class OrderItemTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var itemNameLabel: UILabel!
+    
+    @IBOutlet var radioButtonView: [UIView]!
+    
     let radioButton = LTHRadioButton(selectedColor: .red)
     
     override func awakeFromNib() {

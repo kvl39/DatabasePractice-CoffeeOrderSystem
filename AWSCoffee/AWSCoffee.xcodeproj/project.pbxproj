@@ -25,6 +25,7 @@
 		AD39CD1120D758AE004C594A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD1020D758AE004C594A /* GoogleService-Info.plist */; };
 		AD39CD1520D7691E004C594A /* OrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1320D7691E004C594A /* OrderItemTableViewCell.swift */; };
 		AD39CD1620D7691E004C594A /* OrderItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */; };
+		AD39CD1920D76F96004C594A /* ACTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39CD1820D76F96004C594A /* ACTableViewController.swift */; };
 		FC907D7D37489307F2606C98 /* Pods_AWSCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752E9A0E18AF747816C967A9 /* Pods_AWSCoffee.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		AD39CD1020D758AE004C594A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD39CD1320D7691E004C594A /* OrderItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemTableViewCell.swift; sourceTree = "<group>"; };
 		AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderItemTableViewCell.xib; sourceTree = "<group>"; };
+		AD39CD1820D76F96004C594A /* ACTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		AD39CCF220D74603004C594A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AD39CD1720D76F5F004C594A /* ACTableViewController */,
 				AD39CD0420D74CFE004C594A /* StackItemViewController */,
 				AD39CCFE20D74836004C594A /* OrderListController */,
 				AD39CCFD20D74824004C594A /* ShoppingCartController */,
@@ -205,6 +208,14 @@
 				AD39CD1420D7691E004C594A /* OrderItemTableViewCell.xib */,
 			);
 			path = OrderItemView;
+			sourceTree = "<group>";
+		};
+		AD39CD1720D76F5F004C594A /* ACTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AD39CD1820D76F96004C594A /* ACTableViewController.swift */,
+			);
+			path = ACTableViewController;
 			sourceTree = "<group>";
 		};
 		C4119C10F521C8D0FFC0B253 /* Frameworks */ = {
@@ -345,6 +356,7 @@
 				AD39CD0820D74D58004C594A /* StackItemView.swift in Sources */,
 				AD39CD0220D74874004C594A /* OrderListViewController.swift in Sources */,
 				AD39CD0020D7485B004C594A /* ShoppingCartViewController.swift in Sources */,
+				AD39CD1920D76F96004C594A /* ACTableViewController.swift in Sources */,
 				AD39CD0A20D75230004C594A /* StackItemViewController.swift in Sources */,
 				AD39CD0D20D754E9004C594A /* FirebaseManager.swift in Sources */,
 				AD39CCE320D74469004C594A /* ViewController.swift in Sources */,
@@ -497,7 +509,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLL3688WWP;
 				INFOPLIST_FILE = AWSCoffee/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AWSCoffee.KevinLaio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -513,7 +528,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLL3688WWP;
 				INFOPLIST_FILE = AWSCoffee/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AWSCoffee.KevinLaio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
