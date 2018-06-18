@@ -9,5 +9,10 @@
 import Foundation
 
 class OrderItemsModelManager {
-    var orderItems = [FirebaseSellingItemModel]()
+    var orderItems = [OrderItem]()
+}
+
+struct OrderItem {
+    var itemInformation: FirebaseSellingItemModel
+    var itemDetail = [Bool]()
 }

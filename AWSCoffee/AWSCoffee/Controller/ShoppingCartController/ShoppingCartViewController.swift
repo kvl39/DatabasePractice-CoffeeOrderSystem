@@ -32,6 +32,7 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
     func itemDidPressed(itemInformation: FirebaseSellingItemModel) {
         self.rowArray.append(.orderItem(itemInformation.itemName))
         self.shoppingCartTableView.reloadData()
+        self.orderItemsModelManager.orderItems.append(OrderItem(itemInformation: itemInformation, itemDetail: [false, false, false, false]))
     }
 
     func configureTableView() {
@@ -41,7 +42,16 @@ class ShoppingCartViewController: ACTableViewController, StackItemViewController
     }
     
     override func radioButtonDidSelect(rowNumber: Int) {
-        
+        print("radio select row:\(rowNumber)")
+        var status = [Bool]()
+        let indexPath = IndexPath(row: rowNumber, section: 0)
+        let cell = self.shoppingCartTableView.cellForRow(at: indexPath) as? OrderItemTableViewCell
+        for i in 0...3 {
+            if let isSelected = cell?.radioButtonArray[i].isSelected {
+                status.append(isSelected)
+            }
+        }
+        self.orderItemsModelManager.orderItems[rowNumber].itemDetail = status
     }
 
 }
